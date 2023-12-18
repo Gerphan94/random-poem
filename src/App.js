@@ -1,22 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { Typewriter } from 'react-simple-typewriter'
+
 
 function App() {
+  const words = [
+    "Hello",
+    "One"
+  ]
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <Typewriter 
+            words={words}
+            loop={false}
+            typeSpeed={180}
+            deleteSpeed={50}
+            delaySpeed={5000}
+            cursor
+            cursorStyle='_'
+            
+            />
+        </div>
       </header>
     </div>
   );
